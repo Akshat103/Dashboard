@@ -1,136 +1,140 @@
 <div class="form">
     <% if (message) { %>
-        <p class="text-lg font-bold mb-4 text-green-600">
+        <p class="text-lg font-bold text-green-600">
             <%= message %>
         </p>
         <% }%>
 
-            <form class="mt-8 mx-4 justify-between" method="POST" action="/form">
-
-                <div class="upper-section flex mx-4">
-                    <div class="flex-1">
-                        <!-- Procurement Summary Section -->
-                        <h2 class="text-lg font-bold mb-4">Procurement Summary</h2>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="country">Country:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="country" name="country" type="text" placeholder="Enter country" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="summary">Summary:</label>
-                            <textarea
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="summary" name="summary" rows="4" placeholder="Enter summary" required></textarea>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="deadline">Deadline:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="deadline" name="deadline" type="text" placeholder="Enter deadline" required>
-                        </div>
+            <form class="mt-8 mx-4 " method="POST" action="/form">
+                <div>
+                    <h2 class="text-xl font-bold mb-2 flex justify-center">Register</h2>
+                    <div class="mb-4 px-3">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="summary">Summary:</label>
+                        <textarea
+                            class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                            id="summary" name="summary" rows="1" placeholder="Enter summary" required></textarea>
                     </div>
-                    <div class="flex-1">
-                        <!-- Other Information Section -->
-                        <h2 class="text-lg font-bold mb-4">Other Information</h2>
-                        <div class="grid grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="noticeType">Notice
-                                    Type:</label>
+                    <div class="upper-section flex mx-4">
+                        <div class="flex-1 px-3">
+                            <!-- Procurement Summary Section -->
+                            <h2 class="text-lg font-bold mb-4">Procurement Summary</h2>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="country">Country:</label>
                                 <input
-                                    class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="noticeType" name="noticeType" type="text" placeholder="Enter notice type"
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="country" name="country" type="text" placeholder="Enter country" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="procurementSummary">Summary:</label>
+                                <textarea
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="procurementSummary" name="procurementSummary" rows="4" placeholder="Enter summary" required></textarea>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="deadline">Deadline:</label>
+                                <div class="relative max-w-sm">
+                                    <input type="date"
+                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-webkit-fill-available pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                        id="deadline" name="deadline" placeholder="Enter deadline" required
+                                        data-toggle="datepicker">
+                                </div>
+    
+                            </div>
+                        </div>
+                        <div class="flex-1 px-3">
+                            <!-- Other Information Section -->
+                            <h2 class="text-lg font-bold mb-4">Other Information</h2>
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="noticeType">Notice
+                                        Type:</label>
+                                    <input
+                                        class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        id="noticeType" name="noticeType" type="text" placeholder="Enter notice type"
+                                        required>
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-bold mb-2" for="totalRefNo">Total Ref
+                                        No:</label>
+                                    <input
+                                        class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                        id="totalRefNo" name="totalRefNo" type="text" placeholder="Enter total ref no"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="documentRefNo">Document Ref No:</label>
+                                <input
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="documentRefNo" name="documentRefNo" type="text" placeholder="Enter document ref no"
                                     required>
                             </div>
-                            <div>
-                                <label class="block text-gray-700 text-sm font-bold mb-2" for="totalRefNo">Total Ref
-                                    No:</label>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2"
+                                    for="competition">Competition:</label>
                                 <input
-                                    class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                    id="totalRefNo" name="totalRefNo" type="text" placeholder="Enter total ref no"
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="competition" name="competition" type="text" placeholder="Enter competition"
                                     required>
                             </div>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="documentRefNo">Document Ref
-                                No:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="documentRefNo" name="documentRefNo" type="text" placeholder="Enter document ref no"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2"
-                                for="competition">Competition:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="competition" name="competition" type="text" placeholder="Enter competition"
-                                required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="financier">Financier:</label>
-                            <input
-                                class="w-2/3 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="financier" name="financier" type="text" placeholder="Enter financier" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="lower-section flex mx-4">
-                    <div class="flex-1">
-                        <!-- Purchaser's Detail Section -->
-                        <h2 class="text-lg font-bold mb-4">Purchaser's Detail</h2>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="purchaser">Purchaser:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="purchaser" name="purchaser" type="text" placeholder="Enter purchaser" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Address:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="address" name="address" type="text" placeholder="Enter address" required>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
-                            <input
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="email" name="email" type="email" placeholder="Enter email" required>
-                        </div>
-                    </div>
-
-                    <div class="flex-1">
-                        <!-- Tender Details Section -->
-                        <h2 class="text-lg font-bold mb-4">Tender Details</h2>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2"
-                                for="description">Description:</label>
-                            <textarea
-                                class="shadow appearance-none border rounded w-2/3 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                                id="description" name="description" rows="4" placeholder="Enter description"
-                                required></textarea>
-                        </div>
-
-                        <div class="relative max-w-sm">
-                            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                                <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400"
-                                    fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd"
-                                        d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z"
-                                        clip-rule="evenodd"></path>
-                                </svg>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="financier">Financier:</label>
+                                <input
+                                    class="w-webkit-fill-available shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="financier" name="financier" type="text" placeholder="Enter financier" required>
                             </div>
-                            <input type="text"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-2/3 pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                                placeholder="Select date" name="publishDate" data-toggle="datepicker">
                         </div>
                     </div>
-
-                </div>
-                <div class="flex items-center justify-center mt-6">
-                    <button
-                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        type="submit">Submit</button>
+    
+                    <div class="lower-section flex mx-4">
+                        <div class="flex-1 px-3">
+                            <!-- Purchaser's Detail Section -->
+                            <h2 class="text-lg font-bold mb-4">Purchaser's Detail</h2>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="purchaser">Purchaser:</label>
+                                <input
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="purchaser" name="purchaser" type="text" placeholder="Enter purchaser" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="address">Address:</label>
+                                <input
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="address" name="address" type="text" placeholder="Enter address" required>
+                            </div>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email:</label>
+                                <input
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="email" name="email" type="email" placeholder="Enter email" required>
+                            </div>
+                        </div>
+    
+                        <div class="flex-1 px-3">
+                            <!-- Tender Details Section -->
+                            <h2 class="text-lg font-bold mb-4">Tender Details</h2>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-bold mb-2"
+                                    for="description">Description:</label>
+                                <textarea
+                                    class="shadow appearance-none border rounded w-webkit-fill-available py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                    id="description" name="description" rows="4" placeholder="Enter description"
+                                    required></textarea>
+                            </div>
+    
+                            <div class="relative max-w-sm">
+                                <input type="date"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-webkit-fill-available pl-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Select date" name="publishDate" id="publishDate" data-toggle="datepicker">
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="flex items-center justify-center mt-6">
+                        <button
+                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit">Submit</button>
+                    </div>
                 </div>
             </form>
 
