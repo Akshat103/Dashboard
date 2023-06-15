@@ -39,7 +39,9 @@ app.get('/form', (req, res) => {
 });
 
 app.post('/form', (req, res) => {
+  console.log(req.body);
   const {
+    procurementSummary,
     country,
     summary,
     deadline,
@@ -56,6 +58,7 @@ app.post('/form', (req, res) => {
   } = req.body;
   
   const newForm = new Form({
+    procurementSummary,
     country,
     summary,
     deadline,
